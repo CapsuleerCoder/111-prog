@@ -13,9 +13,8 @@ L = int(input())
 radians_each_line = (2 * math.pi * N) / L            # þetta er formula sem kemur með dæminu
 
 for i in range(L):
-
     x_count = round(20 * (math.sin(i* radians_each_line) + 1))    # við margföldum línuna við radians formulu, plúsum einn við og fáum svo sin úr því, margföldum með 20 eða semi amplitude og roundum þetta til að fá ekki mínus tölu
-    print ("x"*x_count)         # svo prentum við út eins mörg x og við fáum úr formúlunni á undan
+    print ("x" * x_count)         # svo prentum við út eins mörg x og við fáum úr formúlunni á undan
 
 
 #virkar í kattis

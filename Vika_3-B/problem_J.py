@@ -3,6 +3,11 @@
 import sys
 #Subaruba uber skrubytubin.
 
+
+#Get svo sem farið í gegnum þetta allt í einu og bara gert eitthvað ef
+# vowel og before vowel er sama. 
+# EF svo er get ég sliceað allt og tekið bara þann part í burtu
+
 #Sara er skrytin.
 
 #S "ub" a r "ub" a

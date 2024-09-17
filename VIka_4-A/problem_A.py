@@ -10,3 +10,4 @@ def precedes(one_string, another_string):
         return (another_string)
 
 precedes(input(), input())
+

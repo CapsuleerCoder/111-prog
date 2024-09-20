@@ -1,44 +1,46 @@
 #Subaruba
 
 import sys
-#Subaruba uber skrubytubin.
-
-
-#Get svo sem farið í gegnum þetta allt í einu og bara gert eitthvað ef
-# vowel og before vowel er sama. 
-# EF svo er get ég sliceað allt og tekið bara þann part í burtu
 
 #Sara er skrytin.
 
 #S "ub" a r "ub" a
+
+
+# Ég hugsa að það sé best að setja þetta allt í lista, per línu og svo per word, svo taka það í sundur í per staf
+# Fara svo í gegnum stafina, ef vowel finst þá adda ub fyrir framan. 
+# TIl að decodea þá geri ég svipað nema tek fyrstu 2 fyrir framan ef vowel finnst. 
+
+
 listinn = []
 vowels = ["a", "e", "i", "o", "u", "y"]
-index_list = []
-decrypted_sentance = []
+working_list = []
 count = 0
-decrypted_word = []
+end_result = []
+work_string = ""
+
 for line in sys.stdin:
-    # if a:
-    # int ignore
-    listinn = line.split()
-    for word in listinn:
-        for index in range(len(word)):
-            if word[index] in vowels and (word[index-2:index] == "ub"):
-                index_list.append(index)
+    line = line.strip()
+    if line:
+        line = line.split()
+        listinn.insert(count, line)
+        count += 1
+
+for line in listinn:
+    for word in line:
+        for i in word:
+            working_list.append(i)
+        for index in range(len(working_list)):
+            if working_list[index] in vowels:
+                working_list.insert(index, "ub")
+            
+        for letter in working_list:
+            work_string = work_string.join(letter)
+print (work_string)
 
 
-            for i in index_list:
-                decrypted = word[count:i-2]
-                if i == index_list[-1]:
-                    decrypted = word[i:]
-                decrypted_word.append(decrypted)
-                count = i
 
-            print (decrypted_word)
-            decrypted_sentance.append(decrypted_word)
-            decrypted_word = []
-            index_list = []
             
 
-print ("".join(decrypted_sentance))
+#print ("".join(decrypted_sentance))
                 

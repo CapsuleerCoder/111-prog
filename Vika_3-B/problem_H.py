@@ -1,7 +1,7 @@
 #Pig Latin
 
 #fékk þetta ekki að virka með öðru en sys.stdin
-#geri lista til að fylla af með orðum fyrir breytingu. Það er gert í for sys.stdin strengum. 
+#geri lista til að fylla af með orðum fyrir breytingu. Það er gert í for sys.stdin lykkjuni. 
 # Svo förum við í gegnum lista, línu fyrir línu, orð fyrir orð og skoðum hvort það sé sérhljóði eða ekki
 # og bætum yay eða ay við og færum til orðið aðeins og bætum í nýjan lista. 
 # Setjum svo \n new line ef þetta er síðasta orð í línunni
@@ -21,20 +21,21 @@ for strengur in sys.stdin:
         listinn.insert(counter,strengur)
         counter += 1
 
+print (listinn)
 
-for line in listinn:
-    for index, word in enumerate(line):
-        flag = False
-        if word[0] in vowels:
-            sentance.append(word +"yay")
-        else:
-            for letter in range(len(word)):
-                if word[letter] in vowels and not flag:
-                    sentance.append(word[letter:] + word[:letter] + "ay")
-                    flag = True
-        if index ==len(line) -1:
-            sentance += "\n"
-        else:
-            sentance += " "
+# for line in listinn:
+#     for index, word in enumerate(line):
+#         flag = False
+#         if word[0] in vowels:
+#             sentance.append(word +"yay")
+#         else:
+#             for letter in range(len(word)):
+#                 if word[letter] in vowels and not flag:
+#                     sentance.append(word[letter:] + word[:letter] + "ay")
+#                     flag = True
+#         if index ==len(line) -1:
+#             sentance += "\n"
+#         else:
+#             sentance += " "
 
-print ("".join(sentance))
+# print ("".join(sentance))

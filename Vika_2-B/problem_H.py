@@ -11,7 +11,7 @@ total = 0
 
 for i in range(len(str(number))):              # Við þurfum að breyta þessu í str til að finna hversu langt þetta er
     remainder = number % 10                    # síðan deilum við með 10 og finnum afganginn sem er síðasti stafur. 
-    total += remainder                         # plúsum afganginn við total
+    total += remainder                        # plúsum afganginn við total
     number = number // 10                      # heiltöludeilum orginal tölunni niður um tíu til að losna við aftasta staf 
     print (number)
 

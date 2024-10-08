@@ -22,10 +22,10 @@ def get_age() -> str:
             if 0 <= age_test <= 125:
                 return age_str
             else:
-                print (f"You seriously expect me to believe you are {age} years old?")
+                print (f"You seriously expect me to believe you are {age_str} years old?")
         except ValueError:
             print ("Please enter an integer.")
 
 
-if __name__ == "__main__":
-    main()
+
+main()

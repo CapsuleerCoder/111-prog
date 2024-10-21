@@ -9,9 +9,3 @@ while a != 1:
     elif a % 2 != 0:
         a = int((a*3)+1)
     print (a)
-
-
-
-
-
-5

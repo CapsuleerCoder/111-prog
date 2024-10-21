@@ -1,0 +1,3 @@
+#BergMál
+
+print (input())

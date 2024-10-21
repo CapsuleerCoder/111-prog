@@ -1,7 +1,6 @@
 #Summing Integers
 
 answer = int(input())
-
 count = 0
 
 while answer != 10:

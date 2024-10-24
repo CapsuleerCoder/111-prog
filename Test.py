@@ -32,27 +32,36 @@
 #     triple_values(input_list)
 #     print (f"Now the list: {input_list}")
 
+# def make_dict(number):
+#     name_dict = {}
+#     for _ in range(number):
+#         user_id = int(input("What is the id? "))
+#         user_name = input("What is the name?")
+#         name_dict.update({user_id : user_name})
+#     return name_dict
 
-# pair_dict = {} # dict also works
-
-# pair_count = int(input("How many pairs? "))
-# for count in range(pair_count):
-#     u_id = int(input("What is the id? "))
-#     name = input("What is the name? ")
-#     pair_dict.update({u_id :  name})
-# answer = ""
-# while answer != "q":
-#     answer = input("What id to look up? (q to quit)")
-#     if answer == "q":
-#         print ("Quitting...")
-#     else: 
-#         answer = int(answer)
-#         dict_name = pair_dict.get(answer)
-#         if dict_name == None:
-#             print ("The id is not in the collection ")
+# def id_lookup(name_dict):
+#     answer = ""
+#     while answer != "q":
+#         answer = input("What id to look up? ")
+#         if answer == "q": 
+#             print ("Quitting")
+#             return
 #         else:
-#             print (f"The name for {answer} is {dict_name}")
+#             answer = int(answer)
+#             dict_id = name_dict.get(answer)
+#             if dict_id == None:
+#                 print ("The id is not in the collection ")
+#             else: 
+#                 print (f"The name for {answer} is {dict_id}")
 
+# def main():
+#     dict_count = int(input("How many pairs?"))
+#     name_dict = make_dict(dict_count)
+#     id_lookup(name_dict)
+
+
+#main()
 
 class TickCounter:
     def __init__(self, count = 0):

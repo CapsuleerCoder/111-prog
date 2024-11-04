@@ -23,3 +23,14 @@ class WaterBottle:
 
     def __str__(self):
         return f"The bottle currently holds {self.current_contents:.1f}L of water."
+    
+bottle = WaterBottle(10)
+print(f"Bottle max capacity: {bottle.max_capacity}L.")
+
+bottle.fill()
+print(f"Currently holding {bottle.current_contents}L of water.")
+
+sip = bottle.drink(3.7)
+print(f"Received {sip} liters.")
+
+print(bottle)

@@ -1,5 +1,8 @@
 
 class Hand:
+    '''
+    
+    '''
     NUMBER_OF_CARDS = 13
 
     def __init__(self):
